@@ -38,8 +38,10 @@ class Nuts extends Command
      */
     public function handle()
     {
+
         try {
-            MessageBroker::setConfig(__DIR__.'../../../.env');
+            $envPath = base_path().DIRECTORY_SEPARATOR.'.env';
+            MessageBroker::setConfig($envPath);
             $broker = MessageBroker::getInstance();
         } catch (\Exception $e) {
             exit('Problem with connection');
