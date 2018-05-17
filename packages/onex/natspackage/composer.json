@@ -1,0 +1,28 @@
+{
+  "name": "onex/natspackage",
+  "description": "",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Maxim Shablinskiy",
+      "email": "maxshabl@ya.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Onex\\NatsPackage\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Onex\\NatsPackage\\NatsServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php" : ">=5.6",
+    "vladitot/phpnats2": "1.*"
+  }
+}
